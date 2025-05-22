@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
-@config "./tailwind.config.ts";
+@config "../../tailwind.config.ts";
 
 @theme {
 	--font-display: 'Satoshi', system-ui, sans-serif;

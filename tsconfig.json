@@ -9,10 +9,12 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"strictNullChecks": true,
+		"verbatimModuleSyntax": true,
 		"types": ["vite/client", "astro/client", "node"],
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": ["src/*"],
+			"@components/*": ["src/components/*"]
 		}
 	}
 }

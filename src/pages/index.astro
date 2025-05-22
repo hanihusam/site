@@ -1,27 +1,11 @@
 ---
-// Component Imports
-import Counter from '../components/react/Counter';
-import '../styles/global.css';
-const someProps = {
-	count: 0,
-};
+import Layout from "@/components/astro/Layout.astro"
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+const title = "Han — Software Engineer";
+const description =
+  "'A professional freelancer who could help you solve your software engineer and UI design problem";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	</head>
-	<body>
-		<main>
-			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
-			</Counter>
-		</main>
-	</body>
-</html>
+<Layout title={title} description={description}>
+	<h1>Hello, React!</h1>
+</Layout>
