@@ -5,7 +5,6 @@ import tsParser from '@typescript-eslint/parser'
 
 import astro from 'eslint-plugin-astro'
 import astroParser from 'astro-eslint-parser'
-import astroConfig from 'eslint-plugin-astro/lib/configs/recommended.js'
 
 /** @type {import("eslint").Linter.Config} */
 export default [
@@ -45,6 +44,7 @@ export default [
 			],
 		},
 	},
+	...astro.configs.recommended,
 	{
 		files: ['**/*.astro'],
 		plugins: {
@@ -55,9 +55,6 @@ export default [
 			parserOptions: {
 				parser: tsParser,
 			},
-		},
-		rules: {
-			...astroConfig.rules,
 		},
 	},
 ]
