@@ -1,5 +1,5 @@
 ---
-import '@/styles/global.css';
+import "@/styles/global.css";
 
 export interface Props {
   title: string;
@@ -19,89 +19,89 @@ const ogFile = og ? `${og}.png` : "og.png";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
 
-    <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href={canonicalURL} />
+<meta name="generator" content={Astro.generator} />
+<link rel="canonical" href={canonicalURL} />
 
-    <meta property="og:url" content="https://www.bapak2.dev/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${ogHost}/${ogFile}`} />
+<meta property="og:url" content="https://www.bapak2.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={`${ogHost}/${ogFile}`} />
 
-    <meta name="description" content={description} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-   
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Light.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Italic.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+<meta name="description" content={description} />
+<link rel="sitemap" href="/sitemap-index.xml" />
 
-    <title>{title}</title>
-    <script is:inline>
-      // do not try to optimize this. is:inline is there to avoid pre-opt that causes theme flicker
-      const docEl = document.documentElement;
-      const svgIcon = document.querySelector(".favicon");
-      const media = window.matchMedia("(prefers-color-scheme: dark)");
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Light.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Italic.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Medium.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Bold.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Satoshi-Black.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
 
-      let theme = media.matches ? "dark" : "light";
-      if (
-        typeof window.localStorage !== "undefined" &&
-        window.localStorage.getItem("theme")
-      ) {
-        theme = window.localStorage.getItem("theme");
-      }
+<title>{title}</title>
+<script is:inline>
+  // do not try to optimize this. is:inline is there to avoid pre-opt that causes theme flicker
+  const docEl = document.documentElement;
+  const svgIcon = document.querySelector(".favicon");
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
 
-      const toggleTheme = (theme) => {
-        const method = theme === "light" ? "remove" : "add";
+  let theme = media.matches ? "dark" : "light";
+  if (
+    typeof window.localStorage !== "undefined" &&
+    window.localStorage.getItem("theme")
+  ) {
+    theme = window.localStorage.getItem("theme");
+  }
 
-        docEl.classList[method]("dark");
-        svgIcon.href = theme === "light" ? "/icon-light.svg" : "/icon-dark.svg";
-        window.localStorage.setItem("theme", theme);
-      };
+  const toggleTheme = (theme) => {
+    const method = theme === "light" ? "remove" : "add";
 
-      toggleTheme(theme);
-    </script>
+    docEl.classList[method]("dark");
+    svgIcon.href = theme === "light" ? "/icon-light.svg" : "/icon-dark.svg";
+    window.localStorage.setItem("theme", theme);
+  };
+
+  toggleTheme(theme);
+</script>

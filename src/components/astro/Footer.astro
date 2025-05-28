@@ -1,0 +1,43 @@
+---
+import DribbbleIcon from "./icons/Dribbble.astro";
+import GithubIcon from "./icons/Github.astro";
+import LinkedinIcon from "./icons/Linkedin.astro";
+import { Grid } from "@/components/react/Grid";
+import { IconLink } from "@/components/react/IconLink";
+import { Paragraph } from "@/components/react/Typography";
+import { externalLinks } from "@/constant/external-links";
+---
+
+<Grid className="gap-8">
+  <hr class="col-span-full w-full border-neutral-400 dark:border-neutral-100" />
+  <div
+    class="col-span-full mb-8 flex flex-col gap-4 lg:flex-row lg:justify-between"
+  >
+    <Paragraph
+      >{
+        `© ${new Date().getFullYear()} hanihusam. All rights reserved.`
+      }</Paragraph
+    >
+
+    <div class="flex gap-6">
+      <IconLink
+        aria-label="Link to Linkedin profile"
+        href={externalLinks.linkedin}
+      >
+        <LinkedinIcon class="h-6 w-6 text-sky-200 dark:text-neutral-50" />
+      </IconLink>
+      <IconLink
+        aria-label="Link to Github repository"
+        href={externalLinks.github}
+      >
+        <GithubIcon class="h-6 w-6 text-sky-200 dark:text-neutral-50" />
+      </IconLink>
+      <IconLink
+        aria-label="Link to Dribbble profile"
+        href={externalLinks.dribbble}
+      >
+        <DribbbleIcon class="h-6 w-6 text-sky-200 dark:text-neutral-50" />
+      </IconLink>
+    </div>
+  </div>
+</Grid>
