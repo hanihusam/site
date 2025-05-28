@@ -1,221 +1,222 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 @config "../../tailwind.config.ts";
 
 @theme {
-	--font-display: 'Satoshi', system-ui, sans-serif;
+  --font-display: "Satoshi", system-ui, sans-serif;
 
-	--color-sunset-50: #f2bb97;
-	--color-sunset-100: #ec9e6a;
-	--color-sunset-200: #e6813e;
-	--color-sunset-300: #d4651b;
-	--color-sunset-400: #a75016;
+  --color-sunset-50: #f2bb97;
+  --color-sunset-100: #ec9e6a;
+  --color-sunset-200: #e6813e;
+  --color-sunset-300: #d4651b;
+  --color-sunset-400: #a75016;
 
-	--color-sky-50: #a75016;
-	--color-sky-100: #55749b;
-	--color-sky-200: #45577b;
-	--color-sky-300: #304258;
-	--color-sky-400: #1f2a38;
+  --color-sky-50: #a75016;
+  --color-sky-100: #55749b;
+  --color-sky-200: #45577b;
+  --color-sky-300: #304258;
+  --color-sky-400: #1f2a38;
 
-	--color-sky-50: #ffffff;
-	--color-sky-100: #f2f3f2;
-	--color-sky-200: #7a8391;
-	--color-sky-300: #94a3b8;
-	--color-sky-400: #434343;
-	--color-sky-500: #46434e;
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f2f3f2;
+  --color-neutral-200: #7a8391;
+  --color-neutral-300: #94a3b8;
+  --color-neutral-400: #434343;
+  --color-neutral-500: #46434e;
 
-	/* #region  /**=========== Font Sizes =========== */
-	--text-paragraph: 18px;
-	--text-paragraph--line-height: 28px;
-	--text-paragraph--font-weight: 400;
+  /* #region  /**=========== Font Sizes =========== */
+  --text-paragraph: 18px;
+  --text-paragraph--line-height: 28px;
+  --text-paragraph--font-weight: 400;
 
-	--text-heading5: 18px;
-	--text-heading5-line-height: 28px;
-	--text-heading5-font-weight: 500;
-	--text-heading4: 20px;
-	--text-heading4-line-height: 28px;
-	--text-heading4-font-weight: 500;
-	--text-heading3: 24px;
-	--text-heading3-line-height: 32px;
-	--text-heading3-font-weight: 500;
-	--text-heading2-sm: 30px;
-	--text-heading2-sm-line-height: 40px;
-	--text-heading2-sm-font-weight: 700;
-	--text-heading2-md: 36px;
-	--text-heading2-md-line-height: 40px;
-	--text-heading2-md-font-weight: 700;
-	--text-heading2-sm: 36px;
-	--text-heading2-sm-line-height: 40px;
-	--text-heading2-sm-font-weight: 900;
-	--text-heading2-md: 48px;
-	--text-heading2-md-line-height: 40px;
-	--text-heading2-md-font-weight: 900;
-	/* #endregion  /**=========== Font Sizes =========== */
+  --text-heading-6: 18px;
+  --text-heading-6-line-height: 28px;
+
+  --text-heading-5: 20px;
+  --text-heading-5-line-height: 28px;
+
+  --text-heading-4: 24px;
+  --text-heading-4-line-height: 32px;
+
+  --text-heading-3: 30px;
+  --text-heading-3-line-height: 36px;
+
+  --text-heading-2: 36px;
+  --text-heading-2-line-height: 40px;
+
+  --text-heading-1-md: 48px;
+  --text-heading-1-md-line-height: 40px;
+  /* #endregion  /**=========== Font Sizes =========== */
+
+  /* #region  /**=========== Font Weights =========== */
+  --font-weight-normal: initial;
+  --font-weight-regular: 400;
+  /* #endregion  /**=========== Font Weights =========== */
 }
 
 @layer base {
-	/* #region  /**=========== Typography =========== */
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Light.woff2') format('woff2'),
-			url('/fonts/Satoshi-Light.woff') format('woff');
-		font-weight: 300;
-		font-display: swap;
-		font-style: normal;
-	}
+  /* #region  /**=========== Typography =========== */
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Light.woff2") format("woff2"),
+      url("/fonts/Satoshi-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-LightItalic.woff2') format('woff2'),
-			url('/fonts/Satoshi-LightItalic.woff') format('woff');
-		font-weight: 300;
-		font-display: swap;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-LightItalic.woff2") format("woff2"),
+      url("/fonts/Satoshi-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Regular.woff2') format('woff2'),
-			url('/fonts/Satoshi-Regular.woff') format('woff');
-		font-weight: 400;
-		font-display: swap;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Regular.woff2") format("woff2"),
+      url("/fonts/Satoshi-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Italic.woff2') format('woff2'),
-			url('/fonts/Satoshi-Italic.woff') format('woff');
-		font-weight: 400;
-		font-display: swap;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Italic.woff2") format("woff2"),
+      url("/fonts/Satoshi-Italic.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Medium.woff2') format('woff2'),
-			url('/fonts/Satoshi-Medium.woff') format('woff');
-		font-weight: 500;
-		font-display: swap;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Medium.woff2") format("woff2"),
+      url("/fonts/Satoshi-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-MediumItalic.woff2') format('woff2'),
-			url('/fonts/Satoshi-MediumItalic.woff') format('woff');
-		font-weight: 500;
-		font-display: swap;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+      url("/fonts/Satoshi-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Bold.woff2') format('woff2'),
-			url('/fonts/Satoshi-Bold.woff') format('woff');
-		font-weight: 700;
-		font-display: swap;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Bold.woff2") format("woff2"),
+      url("/fonts/Satoshi-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-BoldItalic.woff2') format('woff2'),
-			url('/fonts/Satoshi-BoldItalic.woff') format('woff');
-		font-weight: 700;
-		font-display: swap;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+      url("/fonts/Satoshi-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-Black.woff2') format('woff2'),
-			url('/fonts/Satoshi-Black.woff') format('woff');
-		font-weight: 900;
-		font-display: swap;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-Black.woff2") format("woff2"),
+      url("/fonts/Satoshi-Black.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Satoshi';
-		src:
-			url('/fonts/Satoshi-BlackItalic.woff2') format('woff2'),
-			url('/fonts/Satoshi-BlackItalic.woff') format('woff');
-		font-weight: 900;
-		font-display: swap;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src:
+      url("/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+      url("/fonts/Satoshi-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+  }
 
-	html {
-		font-family:
-			Avenir Next,
-			system-ui,
-			sans-serif;
-	}
-	/* #endregion  /**=========== Typography =========== */
+  html {
+    font-family:
+      Avenir Next,
+      system-ui,
+      sans-serif;
+  }
+  /* #endregion  /**=========== Typography =========== */
 
-	/* I kinda feel like this should be the default... 🤷‍♂️ */
-	[hidden] {
-		pointer-events: none;
-	}
+  /* I kinda feel like this should be the default... 🤷‍♂️ */
+  [hidden] {
+    pointer-events: none;
+  }
 
-	/* These elements get removed before hydration but they can look funny before hydrating */
-	dark-mode,
-	light-mode {
-		display: none;
-	}
+  /* These elements get removed before hydration but they can look funny before hydrating */
+  dark-mode,
+  light-mode {
+    display: none;
+  }
 
-	.underlined {
-		position: relative;
-		text-decoration: none !important;
-		white-space: nowrap;
-	}
+  .underlined {
+    position: relative;
+    text-decoration: none !important;
+    white-space: nowrap;
+  }
 
-	.underlined:focus {
-		outline: none;
-		text-decoration: none !important;
-	}
+  .underlined:focus {
+    outline: none;
+    text-decoration: none !important;
+  }
 
-	.underlined:after {
-		content: '';
-		height: 2px;
-		transform: scaleX(0);
-		transition: transform 0.25s ease;
-		transform-origin: left;
-		left: 0;
-		bottom: -4px;
-		width: 100%;
-		display: block;
-		position: absolute;
-	}
+  .underlined:after {
+    content: "";
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    transform-origin: left;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
 
-	.underlined:hover:after,
-	.underlined:focus:after,
-	.active.underlined:after {
-		background-color: currentColor;
-		transform: scaleX(1);
-	}
+  .underlined:hover:after,
+  .underlined:focus:after,
+  .active.underlined:after {
+    background-color: currentColor;
+    transform: scaleX(1);
+  }
 
-	@media (prefers-reduced-motion) {
-		.underlined:after {
-			opacity: 0;
-			transition: opacity 0.25s ease;
-		}
+  @media (prefers-reduced-motion) {
+    .underlined:after {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
 
-		.underlined:hover:after,
-		.underlined:focus:after,
-		.active.underlined:after {
-			opacity: 1;
-		}
-	}
+    .underlined:hover:after,
+    .underlined:focus:after,
+    .active.underlined:after {
+      opacity: 1;
+    }
+  }
 }

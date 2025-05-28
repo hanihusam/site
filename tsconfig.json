@@ -1,20 +1,20 @@
 {
-	"extends": ["astro/tsconfigs/strict", "@epic-web/config/typescript"],
-	"include": [".astro/types.d.ts", "**/*", "@epic-web/config/reset.d.ts"],
-	"exclude": ["node_modules", "dist", "public", "eslint.config.js"],
-	"mdx": {
-		"checkMdx": true
-	},
-	"compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "react",
-		"strictNullChecks": true,
-		"verbatimModuleSyntax": true,
-		"types": ["vite/client", "astro/client", "node"],
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"],
-			"@components/*": ["src/components/*"]
-		}
-	}
+  "extends": ["astro/tsconfigs/strict", "@epic-web/config/typescript"],
+  "include": [".astro/types.d.ts", "**/*", "@epic-web/config/reset.d.ts"],
+  "exclude": ["node_modules", "dist", "public", "eslint.config.js"],
+  "mdx": {
+    "checkMdx": true
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "strictNullChecks": true,
+    "verbatimModuleSyntax": true,
+    "types": ["vite/client", "astro/client", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"]
+    }
+  }
 }
