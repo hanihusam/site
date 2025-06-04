@@ -1,0 +1,26 @@
+---
+import Button from "./ui/Button.astro";
+import { Grid } from "../react/Grid";
+import { H2 } from "../react/Typography";
+import { externalLinks } from "@/constant/external-links";
+import { Icon } from "astro-icon/components";
+---
+
+<Grid smFull>
+  <div
+    class="col-span-full flex flex-col gap-6 rounded-4xl bg-neutral-500 px-10vw py-[72px] md:flex-row md:px-10 lg:justify-between"
+  >
+    <H2 className="text-neutral-100">Interested working with me?</H2>
+
+    <div class="flex gap-2 self-stretch">
+      <a href={externalLinks.email}>
+        <Button
+          icon="heroicons:arrow-small-right"
+          iconClassName="text-neutral-100"
+        >
+          Let's Talk
+        </Button>
+      </a>
+    </div>
+  </div>
+</Grid>

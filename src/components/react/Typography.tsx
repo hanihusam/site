@@ -7,7 +7,7 @@ interface TitleProps extends React.PropsWithChildren {
   as?: React.ElementType;
   className?: string;
   id?: string;
-  dangerouslySetInnerHTML: {
+  dangerouslySetInnerHTML?: {
     __html: string;
   };
 }

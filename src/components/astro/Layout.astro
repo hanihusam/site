@@ -1,5 +1,6 @@
 ---
 import Footer from "./Footer.astro";
+import Spacer from "./Spacer.astro";
 import Head from "./Head.astro";
 
 export interface Props {
@@ -21,6 +22,7 @@ const { title, description, og } = Astro.props;
       class="relative flex min-h-screen flex-col bg-neutral-100 dark:bg-neutral-400"
     >
       <slot />
+      <Spacer size="lg" />
       <Footer />
     </div>
   </body>

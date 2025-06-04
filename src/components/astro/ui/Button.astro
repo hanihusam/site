@@ -1,0 +1,85 @@
+---
+import { cva, type VariantProps } from "class-variance-authority";
+import type { HTMLAttributes } from "astro/types";
+import { Paragraph } from "@/components/react/Typography";
+import { Icon } from "astro-icon/components";
+
+const button = cva(
+  "items-center justify-center rounded-md px-5 py-3 duration-200 focus:outline-none",
+  {
+    variants: {
+      block: {
+        true: "w-full flex",
+        false: "inline-flex",
+      },
+      variant: {
+        primary:
+          "bg-sunset-200 hover:bg-sunset-300 focus:ring-2 focus:ring-sunset-200/20 active:bg-sunset-400 disabled:bg-sunset-50",
+        secondary:
+          "bg-sky-200 hover:bg-sky-300 focus:ring-2 focus:ring-sky-200/20 active:bg-sky-400 disabled:bg-sky-50",
+      },
+      disabled: {
+        true: "cursor-not-allowed",
+        false: null,
+      },
+    },
+    compoundVariants: [
+      {
+        block: true,
+        variant: "primary",
+        className: "w-full",
+      },
+      {
+        block: true,
+        variant: "secondary",
+        className: "w-full",
+      },
+    ],
+    defaultVariants: {
+      block: false,
+      variant: "primary",
+      disabled: false,
+    },
+  },
+);
+
+interface Props
+  extends Omit<HTMLAttributes<"button">, "disabled">,
+    VariantProps<typeof button> {
+  /** Renders the loading state of button. */
+  isLoading?: boolean;
+  icon?: string;
+  iconClassName?: string;
+}
+
+const {
+  variant = "primary",
+  block = false,
+  disabled = false,
+  isLoading,
+  class: className,
+  icon,
+  iconClassName,
+  ...rest
+} = Astro.props;
+---
+
+<button
+  class:list={button({
+    block,
+    variant,
+    disabled: disabled || isLoading,
+    className,
+  })}
+  disabled={disabled || isLoading}
+  {...rest}
+>
+  <Paragraph prose={false} className="text-neutral-100">
+    <slot />
+  </Paragraph>
+  <Icon
+    class:list={["ml-2", "text-neutral-100", iconClassName]}
+    name={icon}
+    size={16}
+  />
+</button>
