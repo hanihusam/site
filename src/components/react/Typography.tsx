@@ -13,17 +13,17 @@ interface TitleProps extends React.PropsWithChildren {
 }
 
 const fontSize = {
-  h1: "leading-tight font-black text-heading-2 md:text-heading-1",
-  h2: "leading-tight font-bold text-heading-3 md:text-heading-2",
-  h3: "font-medium text-heading-4 md:text-heading-3",
-  h4: "font-medium text-heading-5 md:text-heading-4",
-  h5: "font-medium text-heading-6 md:text-heading-5",
-  h6: "font-medium text-heading-6",
+  h1: "leading-tight font-black text-heading2 md:text-heading1",
+  h2: "leading-tight font-bold text-heading3 md:text-heading2",
+  h3: "font-medium text-heading4 md:text-heading3",
+  h4: "font-medium text-heading5 md:text-heading4",
+  h5: "font-medium text-heading6 md:text-heading5",
+  h6: "font-medium text-heading6",
 };
 
 const titleColors = {
-  primary: "text-primary-500",
-  secondary: "text-secondary-500 dark:text-light",
+  primary: "text-sky-200",
+  secondary: "text-sunset-200 dark:text-neutral-100",
 };
 
 function Title({
