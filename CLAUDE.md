@@ -49,6 +49,31 @@ React components are only used where interactivity or reusable logic is needed. 
 - Custom design tokens in `src/styles/global.css`; prose overrides in `src/styles/prose.css`
 - Tailwind Typography plugin with custom `light`/`dark` prose variants in `tailwind.config.ts`
 
+### Design Tokens (`src/styles/global.css`)
+
+All tokens are defined inside `@theme {}` and map 1:1 to the Figma variable file.
+
+**Colors** — three palettes, full 11-step scale (50–950):
+- `sunset-*` — warm accent; primary brand color is `sunset-400` (`#e6813e`)
+- `sky-*` — cool blue/navy; primary heading color is `sky-600` (`#45577b`)
+- `neutral-*` — grays/white; page bg `neutral-100`, dark bg `neutral-800`, body text `neutral-900`
+
+**Typography** — semantic heading names, sizes from Figma `font.size.*`:
+- `--text-xs/sm/base` (12/14/16px), `--text-paragraph/heading6` (18px) through `--text-heading1` (48px), `--text-6xl/7xl` (60/72px)
+- Line-heights use Figma multipliers: headings 1–3 → `1.25` (tight), headings 4–5 → `1.375` (snug), heading6/paragraph → `1.5` (normal)
+- Font weights: `--font-weight-regular` (400), `--font-weight-medium` (500), `--font-weight-bold` (700), `--font-weight-black` (900)
+
+**Font families:**
+- `--font-display`: `"Satoshi"` — self-hosted in `public/fonts/`, weights 300–900 with italics (WOFF2/WOFF)
+- `--font-mono`: `"JetBrains Mono"` — self-hosted in `public/fonts/`, variable font TTF covering weights 100–800
+
+**Key semantic usages in components:**
+- Headings primary: `text-sky-600` / secondary: `text-sunset-400 dark:text-neutral-100`
+- Body text: `text-neutral-900 dark:text-neutral-100`
+- Button primary: `bg-sunset-400` (hover `sunset-500`, active `sunset-600`)
+- Button secondary: `bg-sky-600` (hover `sky-700`, active `sky-800`)
+- CTA section bg: `bg-neutral-900`
+
 ### Path Aliases
 
 ```
