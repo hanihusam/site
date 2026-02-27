@@ -69,14 +69,12 @@ function H6(props: TitleProps) {
 interface ParagraphProps
   extends React.PropsWithChildren<React.ComponentPropsWithoutRef<"p">> {
   dangerouslySetInnerHTML?: { __html: string };
-  prose?: boolean;
   textColorClassName?: string;
   as?: React.ElementType;
 }
 
 function Paragraph({
   className,
-  prose = true,
   as = "p",
   textColorClassName = "text-neutral-500 dark:text-neutral-100",
   ...rest
@@ -86,9 +84,6 @@ function Paragraph({
       "text-paragraph font-regular max-w-full",
       textColorClassName,
       className,
-      {
-        "prose prose-light dark:prose-dark": prose,
-      },
     ),
     ...rest,
   });
