@@ -4,52 +4,82 @@
 @theme {
   --font-display: "Satoshi", system-ui, sans-serif;
 
-  --color-sunset-50: #f2bb97;
-  --color-sunset-100: #ec9e6a;
-  --color-sunset-200: #e6813e;
-  --color-sunset-300: #d4651b;
-  --color-sunset-400: #a75016;
+  --color-sunset-50: #fdebde;
+  --color-sunset-100: #fbd7bd;
+  --color-sunset-200: #f2bb97;
+  --color-sunset-300: #ec9e6a;
+  --color-sunset-400: #e6813e;
+  --color-sunset-500: #d4651b;
+  --color-sunset-600: #a75016;
+  --color-sunset-700: #8b4212;
+  --color-sunset-800: #72360f;
+  --color-sunset-900: #5e2d0d;
+  --color-sunset-950: #381a07;
 
-  --color-sky-50: #a75016;
-  --color-sky-100: #55749b;
-  --color-sky-200: #45577b;
-  --color-sky-300: #304258;
-  --color-sky-400: #1f2a38;
+  --color-sky-50: #f1f5fa;
+  --color-sky-100: #d9e4f2;
+  --color-sky-200: #b3c9e5;
+  --color-sky-300: #87a5d1;
+  --color-sky-400: #7398c7;
+  --color-sky-500: #55749b;
+  --color-sky-600: #45577b;
+  --color-sky-700: #304258;
+  --color-sky-800: #1f2a38;
+  --color-sky-900: #18212d;
+  --color-sky-950: #0d1219;
 
   --color-neutral-50: #ffffff;
   --color-neutral-100: #f2f3f2;
-  --color-neutral-200: #7a8391;
-  --color-neutral-300: #94a3b8;
-  --color-neutral-400: #434343;
-  --color-neutral-500: #46434e;
+  --color-neutral-200: #e0e3e2;
+  --color-neutral-300: #cbd1d1;
+  --color-neutral-400: #a2a8ac;
+  --color-neutral-500: #7a8391;
+  --color-neutral-600: #5f6571;
+  --color-neutral-700: #50555f;
+  --color-neutral-800: #434343;
+  --color-neutral-900: #46434e;
+  --color-neutral-950: #28262d;
+
+  /* #region  /**=========== Font Family =========== */
+  --font-mono: "JetBrains Mono", monospace;
+  /* #endregion  /**=========== Font Family =========== */
 
   /* #region  /**=========== Font Sizes =========== */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+
   --text-paragraph: 18px;
-  --text-paragraph--line-height: 28px;
+  --text-paragraph--line-height: 1.5;
   --text-paragraph--font-weight: 400;
 
   --text-heading6: 18px;
-  --text-heading6--line-height: 28px;
+  --text-heading6--line-height: 1.5;
 
   --text-heading5: 20px;
-  --text-heading5--line-height: 28px;
+  --text-heading5--line-height: 1.375;
 
   --text-heading4: 24px;
-  --text-heading4--line-height: 32px;
+  --text-heading4--line-height: 1.375;
 
   --text-heading3: 30px;
-  --text-heading3--line-height: 36px;
+  --text-heading3--line-height: 1.25;
 
   --text-heading2: 36px;
-  --text-heading2--line-height: 40px;
+  --text-heading2--line-height: 1.25;
 
   --text-heading1: 48px;
-  --text-heading1--line-height: 40px;
+  --text-heading1--line-height: 1.25;
+
+  --text-6xl: 60px;
+  --text-7xl: 72px;
   /* #endregion  /**=========== Font Sizes =========== */
 
   /* #region  /**=========== Font Weights =========== */
-  --font-weight-normal: initial;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
   /* #endregion  /**=========== Font Weights =========== */
 }
 
@@ -151,6 +181,22 @@
       url("/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
       url("/fonts/Satoshi-BlackItalic.woff") format("woff");
     font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
     font-display: swap;
     font-style: italic;
   }

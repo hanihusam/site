@@ -79,6 +79,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   type="font/woff2"
   crossorigin
 />
+<link
+  rel="preload"
+  href="/fonts/JetBrainsMono-VariableFont_wght.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
 
 <title>{title}</title>
 <script is:inline>

@@ -22,8 +22,8 @@ const fontSize = {
 };
 
 const titleColors = {
-  primary: "text-sky-200",
-  secondary: "text-sunset-200 dark:text-neutral-100",
+  primary: "text-sky-600",
+  secondary: "text-sunset-400 dark:text-neutral-100",
 };
 
 function Title({
@@ -76,7 +76,7 @@ interface ParagraphProps
 function Paragraph({
   className,
   as = "p",
-  textColorClassName = "text-neutral-500 dark:text-neutral-100",
+  textColorClassName = "text-neutral-900 dark:text-neutral-100",
   ...rest
 }: ParagraphProps) {
   return createElement(as, {
