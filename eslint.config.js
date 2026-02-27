@@ -49,12 +49,31 @@ export default [
     files: ["**/*.astro"],
     plugins: {
       astro,
+      "simple-import-sort": simpleImportSort,
     },
     languageOptions: {
       parser: astroParser,
       parserOptions: {
         parser: tsParser,
       },
+    },
+    rules: {
+      "import/order": "off",
+      "sort-imports": "off",
+      "simple-import-sort/exports": "warn",
+      "simple-import-sort/imports": [
+        "warn",
+        {
+          groups: [
+            ["^.+\\.s?css$"],
+            ["^\\u0000"],
+            ["^react$", "^react-dom$"],
+            ["^~", "^@/"],
+            ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+            ["^\\.\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ],
+        },
+      ],
     },
   },
 ];

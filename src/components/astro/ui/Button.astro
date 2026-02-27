@@ -1,8 +1,9 @@
 ---
-import { cva, type VariantProps } from "class-variance-authority";
-import type { HTMLAttributes } from "astro/types";
 import { Paragraph } from "@/components/react/Typography";
+
+import type { HTMLAttributes } from "astro/types";
 import { Icon } from "astro-icon/components";
+import { cva, type VariantProps } from "class-variance-authority";
 
 const button = cva(
   "items-center justify-center rounded-md px-5 py-3 duration-200 focus:outline-none",
@@ -74,7 +75,7 @@ const {
   disabled={disabled || isLoading}
   {...rest}
 >
-  <Paragraph prose={false} className="text-neutral-100">
+  <Paragraph className="text-neutral-100">
     <slot />
   </Paragraph>
   <Icon
