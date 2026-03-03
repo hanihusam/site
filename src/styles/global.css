@@ -1,5 +1,12 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hv {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
 
 @theme {
   --font-display: "Satoshi", system-ui, sans-serif;
@@ -45,17 +52,41 @@
   /* #endregion  /**=========== Font Family =========== */
 
   /* #region  /**=========== Font Sizes =========== */
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 16px;
 
+  /* Utility */
+  --text-xs: 12px;
+  --text-xs--line-height: 1.5;
+  --text-sm: 14px;
+  --text-sm--line-height: 1.5;
+  --text-base: 16px;
+  --text-base--line-height: 1.5;
+
+  /* Body */
   --text-paragraph: 18px;
   --text-paragraph--line-height: 1.5;
   --text-paragraph--font-weight: 400;
 
-  --text-heading6: 18px;
-  --text-heading6--line-height: 1.5;
+  --text-lead: 20px;
+  --text-lead--line-height: 1.6;
 
+  /* UI */
+  --text-caption: 12px;
+  --text-caption--line-height: 1.5;
+
+  --text-label: 12px;
+  --text-label--line-height: 1;
+  --text-label--font-weight: 500;
+  --text-label--letter-spacing: 0.05em;
+
+  --text-overline: 12px;
+  --text-overline--line-height: 1;
+  --text-overline--font-weight: 500;
+  --text-overline--letter-spacing: 0.1em;
+
+  --text-code: 14px;
+  --text-code--line-height: 1.6;
+
+  /* Headings */
   --text-heading5: 20px;
   --text-heading5--line-height: 1.375;
 
@@ -71,8 +102,6 @@
   --text-heading1: 48px;
   --text-heading1--line-height: 1.25;
 
-  --text-6xl: 60px;
-  --text-7xl: 72px;
   /* #endregion  /**=========== Font Sizes =========== */
 
   /* #region  /**=========== Font Weights =========== */
