@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const button = cva(
-  "items-center justify-center rounded-md px-5 py-3 duration-200 focus:outline-none",
+  "items-center justify-center rounded-md px-5 py-3 transition-[colors,transform] duration-150 ease-out active:scale-[0.97] motion-reduce:transition-none motion-reduce:transform-none focus:outline-none",
   {
     variants: {
       block: {
@@ -15,9 +15,9 @@ const button = cva(
       },
       variant: {
         primary:
-          "bg-sunset-400 hover:bg-sunset-500 focus:ring-2 focus:ring-sunset-400/20 active:bg-sunset-600 disabled:bg-sunset-200",
+          "bg-sunset-400 hv:bg-sunset-500 focus:ring-2 focus:ring-sunset-400/20 active:bg-sunset-600 disabled:bg-sunset-200",
         secondary:
-          "bg-sky-600 hover:bg-sky-700 focus:ring-2 focus:ring-sky-600/20 active:bg-sky-800 disabled:bg-sky-50",
+          "bg-sky-600 hv:bg-sky-700 focus:ring-2 focus:ring-sky-600/20 active:bg-sky-800 disabled:bg-sky-50",
       },
       disabled: {
         true: "cursor-not-allowed",
